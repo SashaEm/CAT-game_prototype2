@@ -174,7 +174,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 7859481042582244716, guid: e618aad5d4b302e4fb6e8edba3609295, type: 3}
-  offset: 40
+  offset: 100
 --- !u!1001 &821055092217221416
 PrefabInstance:
   m_ObjectHideFlags: 0
