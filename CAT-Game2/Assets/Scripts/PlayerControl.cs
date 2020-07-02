@@ -1,5 +1,5 @@
 ﻿using System.Collections;
-
+using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class PlayerControl : MonoBehaviour
@@ -42,6 +42,14 @@ public class PlayerControl : MonoBehaviour
         }
     }
 
+    void OnCollisionEnter(Collision other)
+    {
+        if (other.gameObject.CompareTag("Enemy"))
+        {
+            Lose();
+        }
+    }
+
     private IEnumerator Fade()
     {
         var tickAmount = 10;
@@ -78,5 +86,10 @@ public class PlayerControl : MonoBehaviour
         yield return new WaitForSeconds(.5f);
         this.transform.rotation = this.startRotation;
         yield return isSliding = false;
+    }
+
+    private void Lose()
+    {
+        SceneManager.LoadScene("main");
     }
 }

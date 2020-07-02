@@ -14,6 +14,7 @@ public class Spawner : MonoBehaviour
     {
         this.spawnPos.x = 0f;
         this.spawnPos.y = -3.5f;
+        startSpawn = 100f;
     }
 
     private void Update()
