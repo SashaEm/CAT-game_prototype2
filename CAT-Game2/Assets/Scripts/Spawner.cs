@@ -3,6 +3,8 @@
 public class Spawner : MonoBehaviour
 {
     public GameObject[] columns;
+    [SerializeField] private GameObject player;
+    [SerializeField] private GameObject camera;
 
     private static float startSpawn = 100f;
     private int chooser;
@@ -15,6 +17,9 @@ public class Spawner : MonoBehaviour
         this.spawnPos.x = 0f;
         this.spawnPos.y = -3.5f;
         startSpawn = 100f;
+
+        Vector3 playerSpawnPos = new Vector3(0f, 0.5f, 3.1f);
+        Instantiate(player, playerSpawnPos, Quaternion.identity);
     }
 
     private void Update()

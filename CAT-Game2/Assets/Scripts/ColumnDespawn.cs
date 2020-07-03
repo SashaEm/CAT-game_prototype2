@@ -9,7 +9,6 @@ public class ColumnDespawn : MonoBehaviour
 
     void Update()
     {
-        
         if(transform.position.z + offset <= player.position.z)
         {
             Destroy(gameObject);
