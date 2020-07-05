@@ -1,15 +1,18 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class ColumnDespawn : MonoBehaviour
 {
-    [SerializeField] private Transform player;
+    [SerializeField] private GameObject player;
     [SerializeField] private float offset = 40f;
+
+    private void Awake()
+    {
+        player = GameObject.Find("Player");
+    }
 
     void Update()
     {
-        if(transform.position.z + offset <= player.position.z)
+        if(transform.position.z + offset <= player.transform.position.z)
         {
             Destroy(gameObject);
         }

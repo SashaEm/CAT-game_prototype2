@@ -173,8 +173,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 746880044c3548547ba4bd5c9129474d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 4294424220994297972, guid: 269fe81dff2df1d4c810f3e1ea7589fe, type: 3}
-  offset: 100
+  player: {fileID: 980069171385949261, guid: fe70030162931eb49a5c956dba693101, type: 3}
+  offset: 110
 --- !u!1001 &760595937382297711
 PrefabInstance:
   m_ObjectHideFlags: 0

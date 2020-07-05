@@ -2,11 +2,12 @@
 
 public class Spawner : MonoBehaviour
 {
+    private static float startSpawn = 100f;
+
     public GameObject[] columns;
     [SerializeField] private GameObject player;
     [SerializeField] private GameObject camera;
 
-    private static float startSpawn = 100f;
     private int chooser;
     [SerializeField] private float spawnDiff = 200f;
     private Vector3 spawnPos;
@@ -20,6 +21,7 @@ public class Spawner : MonoBehaviour
 
         Vector3 playerSpawnPos = new Vector3(0f, 0.5f, 3.1f);
         Instantiate(player, playerSpawnPos, Quaternion.identity);
+        Instantiate(camera, playerSpawnPos, Quaternion.identity);
     }
 
     private void Update()

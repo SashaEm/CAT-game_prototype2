@@ -45,5 +45,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   columns:
   - {fileID: 7020091339446048878, guid: d2723b520acbcaa4d891b02265a069d0, type: 3}
-  player: {fileID: 4294424220994297960, guid: 269fe81dff2df1d4c810f3e1ea7589fe, type: 3}
+  player: {fileID: 950492970878579586, guid: f8d38910b40fa3d45bc8f7c8132df5e5, type: 3}
+  camera: {fileID: 3980009595728549513, guid: a0cc828bc8a73ff48a0fc4b609d85383, type: 3}
   spawnDiff: 200

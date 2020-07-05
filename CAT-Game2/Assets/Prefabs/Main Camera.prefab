@@ -96,6 +96,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9795a2894b85da24892c9713e5e36618, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 4294424220994297972, guid: 269fe81dff2df1d4c810f3e1ea7589fe, type: 3}
+  target: {fileID: 980069171385949265, guid: fe70030162931eb49a5c956dba693101, type: 3}
   cameraOffset: {x: 0, y: 5.67, z: -11.65}
   cameraRotation: {x: 0, y: 4, z: 0}

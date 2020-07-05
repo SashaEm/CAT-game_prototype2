@@ -28,7 +28,5 @@ public class EnemiesRotation : MonoBehaviour
             pillar.Rotate(0f, 0f, -rotation.x);
             mouseStart = Input.mousePosition;
         }
-
-        
     }
 }

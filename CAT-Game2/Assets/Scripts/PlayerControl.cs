@@ -14,7 +14,7 @@ public class PlayerControl : MonoBehaviour
     private Quaternion startRotation;
     private Vector3 dir = Vector3.zero;
     private Vector3 velocity = Vector3.zero;
-    private Vector3 slide = new Vector3( -8f, 0f, 0f);
+    private Vector3 slide = new Vector3(-8f, 0f, 0f);
     private bool isGrounded;
 
     private void Start()
