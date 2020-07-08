@@ -275,6 +275,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1840841043422338784, guid: b8b859e71c3f37c4c88998ec7fd41518,
+        type: 3}
+      propertyPath: columns.Array.data[0]
+      value: 
+      objectReference: {fileID: 6221646764223044873, guid: 62d041f5c6c11814abdc2f917fdbdcb0,
+        type: 3}
+    - target: {fileID: 1840841043422338784, guid: b8b859e71c3f37c4c88998ec7fd41518,
+        type: 3}
+      propertyPath: maxColumns
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 1840841043422338784, guid: b8b859e71c3f37c4c88998ec7fd41518,
+        type: 3}
+      propertyPath: offset.y
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 1840841043422338785, guid: b8b859e71c3f37c4c88998ec7fd41518,
         type: 3}
       propertyPath: m_Name

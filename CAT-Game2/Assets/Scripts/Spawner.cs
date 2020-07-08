@@ -3,36 +3,45 @@
 public class Spawner : MonoBehaviour
 {
     private static float startSpawn = 100f;
+    private CylinderObject lastSpawned = null;
+    private int columnsSpawned;
 
-    public GameObject[] columns;
+    public CylinderObject[] columns;
     [SerializeField] private GameObject player;
     [SerializeField] private GameObject camera;
-
+    [SerializeField] private int maxColumns;
+    [SerializeField] private Vector3 offset;
     private int chooser;
     [SerializeField] private float spawnDiff = 200f;
-    private Vector3 spawnPos;
-    private Vector3 spawnRot = new Vector3(90f, 0f, 0f);
 
     private void Awake()
     {
-        this.spawnPos.x = 0f;
-        this.spawnPos.y = -3.5f;
-        startSpawn = 100f;
-
-        Vector3 playerSpawnPos = new Vector3(0f, 0.5f, 3.1f);
-        Instantiate(player, playerSpawnPos, Quaternion.identity);
-        Instantiate(camera, playerSpawnPos, Quaternion.identity);
+        columnsSpawned = 0;
+        Instantiate(camera, transform.position, transform.rotation);
+        Instantiate(player, transform.position + offset, transform.rotation);
     }
 
     private void Update()
     {
-        if(startSpawn < this.spawnDiff * 10 + 15f)
+        if(columnsSpawned < maxColumns)
         {
-            this.spawnPos.z = startSpawn;
             this.chooser = Random.Range(0, this.columns.Length);
+            SpawnPrefab(columns[chooser]);
+            columnsSpawned += 1;
+        }
+    }
 
-            Instantiate(this.columns[this.chooser], this.spawnPos, Quaternion.Euler(this.spawnRot));
-            startSpawn += this.spawnDiff;
+    private void SpawnPrefab(CylinderObject prefab)
+    {
+        if (lastSpawned == null)
+        {
+            var newCylinder = Instantiate(prefab, transform.position, transform.rotation);
+            lastSpawned = newCylinder;
+        }
+        else
+        {
+            var newCylinder = Instantiate(prefab, lastSpawned.EndPoint.position, lastSpawned.EndPoint.rotation);
+            lastSpawned = newCylinder;
         }
     }
 }
