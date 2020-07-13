@@ -12,7 +12,6 @@ public class Spawner : MonoBehaviour
     [SerializeField] private int maxColumns;
     [SerializeField] private Vector3 offset;
     private int chooser;
-    [SerializeField] private float spawnDiff = 200f;
 
     private void Awake()
     {
